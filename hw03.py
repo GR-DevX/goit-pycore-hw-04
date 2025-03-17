@@ -28,7 +28,6 @@ except subprocess.CalledProcessError as e:
 from colorama import init, Fore, Style
 
 # Обробка аргументів командного рядка
-
 init(autoreset=True)
 print(f"{Fore.GREEN}Colorama активована і готова до використання!")
 
@@ -50,7 +49,6 @@ def get_directory_path():
     return directory
 
 # Рекурсивний обхід директорії
-
 def print_directory_structure(directory: Path, indent: str = ""):
     for item in directory.iterdir():
         if item.is_dir():
@@ -60,7 +58,6 @@ def print_directory_structure(directory: Path, indent: str = ""):
             print(f"{indent}{Fore.GREEN}{item.name}")
 
 # Основний блок виконання скрипта
-
 def main():
     directory = get_directory_path()
     print(f"{Fore.YELLOW}Структура директорії: {directory}")
